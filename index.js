@@ -137,7 +137,7 @@ async function send (ctx, path, opts = {}) {
     throw err
   }
 
-  if (setHeaders) setHeaders(ctx.res, path, stats)
+  if (setHeaders) setHeaders(ctx, path, stats)
 
   // stream
   ctx.set('Content-Length', stats.size)
